@@ -14,9 +14,6 @@ body {
     position: relative;
     align-items: center;
     border: black 1px solid;
-    
-    
-    
 }
 
 .logo {
@@ -26,12 +23,6 @@ body {
     position: absolute;
     left: 55px;
     text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
-    
-
-
-
-    
-
 }
 
 .menu-icon {
@@ -262,3 +253,114 @@ body {
   }
 }
 /*  Review section*/
+
+.review-page{
+  width: 100%;
+  height: 90%
+}
+.review-wrap{
+  display: flex;
+  align-items: center;
+}
+.review-page .cards {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  padding: 50px;
+  scroll-behavior: smooth;
+}
+
+.review-page .cards::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
+.review-page .card {
+  min-width: 300px;
+  height: 250px;
+  margin-right: 20px; /* Adjust based on your design preference for space between cards */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* A touch of shadow for depth, adjust as you like */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 10px;
+  border: none;
+}
+
+/* Ensuring the last card aligns nicely without extra space */
+.review-page .card:last-child {
+  margin-right: 0;
+}
+
+/* Optional: If you want to ensure the cards have a uniform look */
+.card-above-section, .card-below-section {
+  padding: 10px; /* Adjust padding as needed */
+}
+
+.profile-img img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.card-below-section{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+
+}
+.review-head{
+  padding: 50px 0 0 50px;
+}
+
+.footer{
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 2fr 1fr 2fr 1fr;
+  background-color: black;
+  color: white;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    place-content: center;
+    font-size: 1.5rem;
+    padding: 50px;
+    align-items: center;
+    text-align: center;
+}
+.content-above{
+  width: 70%;
+  padding: 20px;
+}
+.content-below{
+  display: grid;
+  width: 70%;
+  place-content: center;
+}
+.footer-logo{
+  display: grid;
+  place-content: center;
+}
+
+.footer-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.footer-links a{
+  text-decoration: none;
+  color: white;
+
+}
+.footer-rightsection{
+  display: grid;
+  place-content: center;
+  font-weight: lighter;
+  font-size: 1rem;
+}

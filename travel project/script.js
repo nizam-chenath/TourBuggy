@@ -74,3 +74,19 @@ images.forEach((img, index) => {
 
   dotContainer.appendChild(dot);
 });
+
+// Ensuring the script runs after the document is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollAmount = 300; // This is the distance each button click will scroll
+  const scrollContainer = document.querySelector('.cards'); // Adjust if your container has a different class
+
+  document.getElementById('backBtn').addEventListener('click', function() {
+      // Scrolls left
+      scrollContainer.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', function() {
+      // Scrolls right
+      scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+});
