@@ -36,6 +36,48 @@ body {
     left: 1450px;
     margin: 10px;
 }
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0 20px;
+}
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
 
 /* Full Width Image Section Styles */
 .image-section {
@@ -147,10 +189,12 @@ body {
 /* carousel style */
 .gallery{
   width: 100%;
-  display: flex;
-  justify-content: center;
-  overflow-x: scroll;
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none;
 }
 
 .gallery-wrap{
@@ -163,18 +207,11 @@ body {
 .gallery-wrap img{
   width: 30px;
 }
-.gallery div{
-  width: 80%;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-gap: 40px;
-  padding: 10px;
-  flex: none;
-}
 
 .gallery div img{
-  width: 100%;
+  width: 300px;
   height: 100%;
+  padding: 10px;
   border-radius: 1.8rem;
 }
 
@@ -250,6 +287,9 @@ body {
   .gallery div img{
     width: 200px;
     height: 300px;
+  }
+  .whatsup-icon img{
+    width: 75px;
   }
 }
 /*  Review section*/
@@ -363,4 +403,11 @@ body {
   place-content: center;
   font-weight: lighter;
   font-size: 1rem;
+}
+.whatsup-icon img{
+  width: 50px;
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    z-index: 999;
 }
