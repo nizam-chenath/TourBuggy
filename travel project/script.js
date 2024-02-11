@@ -90,3 +90,17 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   });
 });
+
+function toggleNav() {
+  var sidebar = document.getElementById("mySidebar");
+  var menuButton = document.querySelector('.menu'); // Assuming this class is unique to your menu button
+  if (sidebar.style.width === "250px") {
+      sidebar.style.width = "0";
+      menuButton.classList.remove('opened'); // Resetting the menu icon to its original state
+      menuButton.setAttribute('aria-expanded', 'false');
+  } else {
+      sidebar.style.width = "250px";
+      menuButton.classList.add('opened');
+      menuButton.setAttribute('aria-expanded', 'true');
+  }
+}

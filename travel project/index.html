@@ -25,7 +25,7 @@
     <div class="navbar">
         <div class="img-logo"><img src="/image/img-logo.png" alt="website-logo"></div>
         <div class="logo">Tour<span class="buggy">Buggy</span></div>
-        <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+        <button class="menu" onclick="toggleNav();" aria-label="Main Menu">
             <svg width="50" height="50" viewBox="0 0 100 100">
               <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
               <path class="line line2" d="M 20,50 H 80" />
@@ -33,12 +33,20 @@
             </svg>
           </button>
           </div>
+
           
           <!-- <input type="checkbox" role="button" aria-label="Display the menu" class="menu"> -->
     </div>
+    <div id="mySidebar" class="sidebar">
+        <a href="#Home" onclick="toggleNav()">Home</a>
+        <a href="#Review" onclick="toggleNav()">Reviews</a>
+        <a href="#About" onclick="toggleNav()">About Us</a>
+        <a href="#Gallery" onclick="toggleNav()">Gallery</a>
+        <a href="#Contact" onclick="toggleNav()">Contact Us</a>
+    </div>
 
     <!-- Full Width Image Section -->
-    <div class="image-section">
+    <div id="Home" class="image-section">
         <img src="image/home-img1.png"  class="fade">
         <img src="image/john-lee-oMneOBYhJxY-unsplash.jpg"  class="fade">
         <img src="image/mar-bustos-ARVFsI-32Uk-unsplash.jpg"  class="fade">
@@ -56,13 +64,13 @@
 
         </div>
     </div>
-    <div class="img-text">
+    <div id="About" class="img-text">
         <p>
             We provide experiential travel and adventure with unmatched hospitality. Join with us for making memories and rebuilding life.  
         </p>
     </div>
     <div class="border-line">
-    <div class="gallery-page">
+    <div id="Gallery" class="gallery-page">
         <div class="gallery-wrap">
             <img src="image/left-arrow.png" id="backBtn" alt="">
             <div class="gallery">
@@ -93,7 +101,7 @@
 </div>
 
     <!-- review section -->
-     <div class="review-page">
+     <div id="Review" class="review-page">
         <div><h2 class="review-head">REVIEW</h2></div>
         <div class="review-wrap">
             <div class="cards">
@@ -152,7 +160,7 @@
             <img src="image/whatsapp.png" alt="">
         </a>
     </div>
-    <div class="footer">
+    <div id="Contact" class="footer">
         <div class="footer-content">
             <div class="content-above">
                 Tour Buggy is a tour operating company works based on kerala Tourism. We ensure our customers satisfaction.
@@ -166,11 +174,11 @@
             <img src="/image/img-logo.png" alt="website-logo">
         </div>
         <div class="footer-links">
-            <a href="">Home</a>
-            <a href="">Packages</a>
-            <a href="">Gallery</a>
-            <a href="">Contact Us</a>
-            <a href="">about Us</a>
+            <a href="#Home">Home</a>
+            <a href="#Review">Reviews</a>
+            <a href="#Gallery">Gallery</a>
+            <a href="#Contact">Contact Us</a>
+            <a href="#About">about Us</a>
         </div>
         <div class="footer-rightsection">
             copyright tourbuggy pvt. ltd
